@@ -34,6 +34,9 @@
 		D0B5E62E1912166C00533008 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5E62C1912166C00533008 /* Parse.framework */; };
 		D0B5E631191216E900533008 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B5E630191216E900533008 /* LoginViewController.m */; };
 		D0B5E63419121D8B00533008 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B5E63319121D8B00533008 /* SettingsTableViewController.m */; };
+		D0F9D1901912DFA300A08C70 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D18F1912DFA300A08C70 /* SubmitViewController.m */; };
+		D0F9D1931912E48A00A08C70 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D1921912E48A00A08C70 /* MainTabBarViewController.m */; };
+		D0F9D1961912EA7200A08C70 /* ItemSubmission.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9D1951912EA7200A08C70 /* ItemSubmission.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,12 @@
 		D0B5E630191216E900533008 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D0B5E63219121D8B00533008 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		D0B5E63319121D8B00533008 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		D0F9D18E1912DFA300A08C70 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
+		D0F9D18F1912DFA300A08C70 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		D0F9D1911912E48A00A08C70 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		D0F9D1921912E48A00A08C70 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		D0F9D1941912EA7200A08C70 /* ItemSubmission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSubmission.h; sourceTree = "<group>"; };
+		D0F9D1951912EA7200A08C70 /* ItemSubmission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSubmission.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +173,16 @@
 			isa = PBXGroup;
 			children = (
 				D0A7CE26191207DB0073EE5F /* Main.storyboard */,
+				D0F9D18E1912DFA300A08C70 /* SubmitViewController.h */,
+				D0F9D18F1912DFA300A08C70 /* SubmitViewController.m */,
+				D0F9D1941912EA7200A08C70 /* ItemSubmission.h */,
+				D0F9D1951912EA7200A08C70 /* ItemSubmission.m */,
 				D0B5E63219121D8B00533008 /* SettingsTableViewController.h */,
 				D0B5E63319121D8B00533008 /* SettingsTableViewController.m */,
 				D0B5E62F191216E900533008 /* LoginViewController.h */,
 				D0B5E630191216E900533008 /* LoginViewController.m */,
+				D0F9D1911912E48A00A08C70 /* MainTabBarViewController.h */,
+				D0F9D1921912E48A00A08C70 /* MainTabBarViewController.m */,
 				D0A7CE2F191207DB0073EE5F /* Images.xcassets */,
 				D0A7CE1B191207DB0073EE5F /* Supporting Files */,
 			);
@@ -333,8 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F9D1901912DFA300A08C70 /* SubmitViewController.m in Sources */,
 				D0B5E63419121D8B00533008 /* SettingsTableViewController.m in Sources */,
 				D0A7CE25191207DB0073EE5F /* AppDelegate.m in Sources */,
+				D0F9D1961912EA7200A08C70 /* ItemSubmission.m in Sources */,
+				D0F9D1931912E48A00A08C70 /* MainTabBarViewController.m in Sources */,
 				D0A7CE21191207DB0073EE5F /* main.m in Sources */,
 				D0B5E631191216E900533008 /* LoginViewController.m in Sources */,
 			);

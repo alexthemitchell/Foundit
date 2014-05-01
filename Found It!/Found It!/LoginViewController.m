@@ -8,19 +8,22 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface LoginViewController ()
+@property CLLocationManager* locationManager;
 
 @end
 
 @implementation LoginViewController
 - (IBAction)loginWithFacebook:(id)sender {
+    
     [PFFacebookUtils logInWithPermissions:@[@"public_profile",@"email"] block:^(PFUser *user, NSError *error) {
+        
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in through Facebook!");
-            [self performSegueWithIdentifier:@"loggedIn" sender:self];
             [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
                     // Store the current user's Facebook ID on the user
@@ -39,6 +42,8 @@
                     [[PFUser currentUser] saveInBackground];
                 }
             }];
+            
+            [self performSegueWithIdentifier:@"loggedIn" sender:self];
         } else {
             NSLog(@"User logged in through Facebook!");
             
@@ -48,15 +53,9 @@
     
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 -(void) viewDidAppear:(BOOL)animated{
+    
     if ([PFUser currentUser]){
         NSLog(@"Cache Logged in");
         [self performSegueWithIdentifier:@"loggedIn" sender:self];
@@ -75,15 +74,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+{
+
  }
- */
+
 
 @end

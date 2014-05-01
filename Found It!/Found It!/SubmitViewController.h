@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  SubmitViewController.h
 //  Found It!
 //
 //  Created by Alex Mitchell on 5/1/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface LoginViewController : UIViewController <CLLocationManagerDelegate>
+@interface SubmitViewController : UIViewController
 
 @end
