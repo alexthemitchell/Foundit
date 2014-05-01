@@ -9,21 +9,33 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <Crashlytics/Crashlytics.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Prepare Parse
+    
     [Parse setApplicationId:@"4HieTJwUyaYVbR5IbpQ9qvZ74sZVuRlE4cQLpt7H"
                   clientKey:@"JyPLfOhylqNtSYljshfyAO8HaSSA4zGVwaat1MNS"];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Register for Remote Notifications
+    
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
     
+    // Social Media Initialization
     
     [PFFacebookUtils initializeFacebook];
     [PFTwitterUtils initializeWithConsumerKey:@"iCafWmQ5c7lIPF8lgkxejbjDE"
                                consumerSecret:@"yvPQjgNr8vMuW8jsuicUGaRSx6xxZt5QoiIJ7xDgn1TWWQgaxy"];
+    
+    //Analytics Initialization
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [Crashlytics startWithAPIKey:@"b7a2a503d3dffcb4aa1898c4a0bbe7472f4cfa2a"];
+    
+    
     return YES;
 }
 - (BOOL)application:(UIApplication *)application

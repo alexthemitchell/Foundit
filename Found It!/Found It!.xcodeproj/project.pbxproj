@@ -14,9 +14,9 @@
 		D0036AF0191208C900D7DF1C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AE7191208C900D7DF1C /* MobileCoreServices.framework */; };
 		D0036AF1191208C900D7DF1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AE8191208C900D7DF1C /* QuartzCore.framework */; };
 		D0036AF2191208C900D7DF1C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AE9191208C900D7DF1C /* Security.framework */; };
-		D0036AF3191208C900D7DF1C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AEA191208C900D7DF1C /* StoreKit.framework */; };
 		D0036AF4191208C900D7DF1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AEB191208C900D7DF1C /* SystemConfiguration.framework */; };
 		D0036AF5191208C900D7DF1C /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0036AEC191208C900D7DF1C /* Twitter.framework */; };
+		D09BF6B3191297E500E6F54D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09BF6B2191297E500E6F54D /* Crashlytics.framework */; };
 		D0A7CE15191207DB0073EE5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A7CE14191207DB0073EE5F /* Foundation.framework */; };
 		D0A7CE17191207DB0073EE5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A7CE16191207DB0073EE5F /* CoreGraphics.framework */; };
 		D0A7CE19191207DB0073EE5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A7CE18191207DB0073EE5F /* UIKit.framework */; };
@@ -54,9 +54,9 @@
 		D0036AE7191208C900D7DF1C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D0036AE8191208C900D7DF1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0036AE9191208C900D7DF1C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D0036AEA191208C900D7DF1C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D0036AEB191208C900D7DF1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D0036AEC191208C900D7DF1C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		D09BF6B2191297E500E6F54D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D0A7CE11191207DB0073EE5F /* Found It!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Found It!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A7CE14191207DB0073EE5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0A7CE16191207DB0073EE5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B5E62D1912166C00533008 /* FacebookSDK.framework in Frameworks */,
+				D09BF6B3191297E500E6F54D /* Crashlytics.framework in Frameworks */,
 				D0B5E62E1912166C00533008 /* Parse.framework in Frameworks */,
 				D0036AED191208C900D7DF1C /* CFNetwork.framework in Frameworks */,
 				D0036AEE191208C900D7DF1C /* CoreLocation.framework in Frameworks */,
@@ -95,7 +96,6 @@
 				D0036AF0191208C900D7DF1C /* MobileCoreServices.framework in Frameworks */,
 				D0036AF1191208C900D7DF1C /* QuartzCore.framework in Frameworks */,
 				D0036AF2191208C900D7DF1C /* Security.framework in Frameworks */,
-				D0036AF3191208C900D7DF1C /* StoreKit.framework in Frameworks */,
 				D0036AF4191208C900D7DF1C /* SystemConfiguration.framework in Frameworks */,
 				D0036AE31912089400D7DF1C /* AudioToolbox.framework in Frameworks */,
 				D0A7CE17191207DB0073EE5F /* CoreGraphics.framework in Frameworks */,
@@ -140,6 +140,7 @@
 		D0A7CE13191207DB0073EE5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D09BF6B2191297E500E6F54D /* Crashlytics.framework */,
 				D0B5E62B1912166C00533008 /* FacebookSDK.framework */,
 				D0B5E62C1912166C00533008 /* Parse.framework */,
 				D0036AE4191208C900D7DF1C /* CFNetwork.framework */,
@@ -148,7 +149,6 @@
 				D0036AE7191208C900D7DF1C /* MobileCoreServices.framework */,
 				D0036AE8191208C900D7DF1C /* QuartzCore.framework */,
 				D0036AE9191208C900D7DF1C /* Security.framework */,
-				D0036AEA191208C900D7DF1C /* StoreKit.framework */,
 				D0036AEB191208C900D7DF1C /* SystemConfiguration.framework */,
 				D0036AEC191208C900D7DF1C /* Twitter.framework */,
 				D0036AE21912089400D7DF1C /* AudioToolbox.framework */,
@@ -215,6 +215,7 @@
 				D0A7CE0D191207DB0073EE5F /* Sources */,
 				D0A7CE0E191207DB0073EE5F /* Frameworks */,
 				D0A7CE0F191207DB0073EE5F /* Resources */,
+				D09BF6B1191297CD00E6F54D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,9 +254,13 @@
 				ORGANIZATIONNAME = "Alex Mitchell";
 				TargetAttributes = {
 					D0A7CE10191207DB0073EE5F = {
+						DevelopmentTeam = H69TS4DPUJ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 							com.apple.iOS = {
 								enabled = 0;
@@ -306,6 +311,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D09BF6B1191297CD00E6F54D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run b7a2a503d3dffcb4aa1898c4a0bbe7472f4cfa2a fdde5c14daeae87e3064e91cf0f254fc35ae402c4153983b179af77f9c0ea801";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0A7CE0D191207DB0073EE5F /* Sources */ = {
