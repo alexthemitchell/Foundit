@@ -14,9 +14,11 @@
 @property (retain) PFGeoPoint *location;
 @property (retain) PFUser *owner;
 @property (retain) NSString *title;
+@property (retain) PFFile *image;
 
 
 
 + (NSString *)parseClassName;
+- (void) saveImage:(UIImage*) image;
 
 @end

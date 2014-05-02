@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubmitViewController : UIViewController
+@interface SubmitViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end

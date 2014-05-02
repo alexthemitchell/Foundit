@@ -16,9 +16,30 @@
 @end
 
 @implementation SubmitViewController
+- (IBAction)takePicture:(id)sender {
+    UIImagePickerController *imagePicker = [UIImagePickerController new];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else{
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    [imagePicker setDelegate:self];
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image= [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.imageView setImage: image];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+
 - (IBAction)submitClicked:(id)sender {
-    NSLog(@"Clicked");
+    [[self submission] saveImage:self.imageView.image];
     [[self submission] setTitle:self.itemTitle.text];
+    
     [[self submission] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error){
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There's been a problem." delegate:self cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
@@ -32,14 +53,6 @@
     [self resignFirstResponder];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -50,14 +63,8 @@
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
         [[self submission] setLocation: geoPoint];
     }];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
